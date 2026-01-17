@@ -1,0 +1,7 @@
+[
+  {
+    "key": "cmd+shift+l",
+    "command": "workbench.action.tasks.runTask",
+    "args": "LaTeX: Compile and Open PDF"
+  }
+]

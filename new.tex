@@ -1,0 +1,97 @@
+\documentclass[12pt,a4paper]{ltjsarticle}
+
+\usepackage{luatexja-fontspec} % fontspec使うなら
+\usepackage{amsmath,amssymb,bm}
+\usepackage{ascmac}
+\usepackage{cases}
+\usepackage{fancybox}
+\usepackage{amsthm}
+\usepackage{here}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shadows,intersections,calc,math,angles,quotes}
+
+\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}
+
+% ---- theorem styles ----
+\newtheoremstyle{mystyle}% name
+  {}% Space above
+  {}% Space below
+  {\normalfont}% Body font
+  {}% Indent amount
+  {\bfseries}% Theorem head font
+  {.}% Punctuation after theorem head
+  { }% Space after theorem head
+  {}% Theorem head spec
+
+\theoremstyle{mystyle}
+\newtheorem{dfn}{定義}[subsection]
+\newtheorem{lem}[dfn]{補題}
+\newtheorem{cor}[dfn]{系}
+\newtheorem{thm}[dfn]{定理}
+\newtheorem{rem}[dfn]{注意}
+\newtheorem{clm}[dfn]{主張}
+\newtheorem*{prf}{証明}
+
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\newcommand{\divergence}{\mathrm{div}\,}
+\newcommand{\grad}{\mathrm{grad}\,}
+\newcommand{\rot}{\mathrm{rot}\,}
+
+\setlength{\columnseprule}{0.4pt}%2段組に線を引く
+
+\makeatletter
+\makeatother
+\pagestyle{empty}
+
+\title{思ったことをまとめていく 兼 LaTeX練習}
+\author{入佐}
+
+\begin{document}
+\setcounter{section}{0}
+\maketitle
+
+\section{勉強する意味は何だろうか}
+なんのために勉強するのだろうか. 学校でやる勉強には, どのような意味があるのだろうか. もっと問うと, 普通科で身につけることができる力とは何だろうか. やらなければいけないことなのだろうか. 
+
+大学に行くために勉強するのだろうか. やれと言われるから勉強するのだろうか. 立派な大人になるために勉強するのだろうか. 1位になるために勉強するのだろうか. あの人に勝つために勉強するのだろうか. 褒められるために勉強するのだろうか. 怒られないようにするために勉強するのだろうか. 
+
+\section{はじめに}
+\subsection{意味のある時間にしたい}
+人生は有限である. お互い意味のある時間にしたい. 
+
+\subsection{数学への取り組み方}
+進学, 就職に必要. 判断力をつけてもらいたい. 物事を正確に把握する力. 問題を発見し, 適切に対応する力. それらが数学を通して身につくと信じている. 
+
+\subsection{課題への取り組み方}
+自分の力になるような取り組みをする. 受験において必要であるのならばそのような力. 必要ない人は期限内に提出物を出す力, 一生懸命取り組むことができる力. 意味のあるものにしてほしい. お互い意味のない時間になってしまうかもしれない. 課題は必ず提出してもらう. 
+
+\subsection{授業の進め方}
+
+\subsubsection{教科書をメインに使っていく}
+とにかく教科書をよく読んで欲しい. 分からなかったら教科書. 教科書の読み方を授業するようなもの. 大事なところをノートにまとめる. 
+
+\subsubsection{意味のあるノートを作りましょう}
+基本的な書き方は統一. 裏面参照. 自分のルールがある人は個別に相談してください. 無駄なことは書きません, 板書内容は全てノートに取ってください. 自分の解いた跡を残してください. 黒板には書いていないけど, 大事だなと思うことは積極的にメモしよう. 
+
+\subsubsection{努力したものは形で残しましょう. (ファイルの使い方)}
+ファイルを2冊用意してもらいます. 授業用(授業で扱うプリント, 小テスト)の1冊と, 課題用(日々課題(毎日の宿題), 週末課題を閉じる)の1冊です. 数学で扱うプリントは穴を開けて必ず該当するファイルに閉じてください. 
+
+\subsection{問題集の使い方}
+副教材で問題集が数冊あると思います. (類比方式による数学I・A問題集, ニューアクション$\beta$数学I$+$A, Study-upノート数学I$+$Aなど) これらは基本的には自主的に取り組んで欲しいものです. たまに宿題として解いてきてほしいという事もあるかもしれませんが, そのような指示がなくても学習した内容はどんどん解き進めてほしいです. 授業で時間が余った時などはこれらをやってもらいたいので, 毎回授業に持ってきてください. 
+
+\subsection{たくさんコミュニケーションを取りましょう}
+何かあれば, 遠慮なく声をかけてください. 分からなくなったら, すぐに教えてください. 一緒に頑張りましょう. 
+
+\section{授業で何をする？}
+\subsection{教科書をなぞって, 例題の解説をするのが教員ではない. }
+教科書に載っている内容を説明し, 問題の解き方を解説するのが教員の仕事ではない. 課題を課し, 提出させるのが教員の仕事ではない. 自ら新しい概念を頭に入れ, 理解し, 活用するための力をつけるのが教員の仕事である.
+
+\section{教員として何を伝えるのか}
+\subsection{勉学に向き合えない生徒に何を伝えるのか}
+高校に入学はした. しかし, 勉強に向き合うことができない, 勉強が嫌い. そのような生徒から何を聞き, 何を伝えるのか. 何ができるようになってほしいのか. 
+
+\subsection{規則が守れず, 自分に甘い行動をとってしまう生徒に何を伝えるのか}
+校内での規則を守ることができない. 自分の欲に負け, 規則を破ってしまう. 他人にも悪い影響を与えてしまう. 
+
+\end{document}
