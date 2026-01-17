@@ -1,0 +1,19 @@
+# LaTeX generated files
+*.pdf
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.bbl
+*.blg
+*.dvi
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.fot
+*.cb
+*.cb2
+.DS_Store
