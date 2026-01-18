@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper]{ltjsarticle}
+
+\usepackage{luatexja-fontspec} % fontspec使うなら
+\usepackage{amsmath,amssymb,bm}
+\usepackage{ascmac}
+\usepackage{cases}
+\usepackage{fancybox}
+\usepackage{amsthm}
+\usepackage{here}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shadows,intersections,calc,math,angles,quotes}
+
+\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}
+
+% ---- theorem styles ----
+\newtheoremstyle{mystyle}% name
+  {}% Space above
+  {}% Space below
+  {\normalfont}% Body font
+  {}% Indent amount
+  {\bfseries}% Theorem head font
+  {.}% Punctuation after theorem head
+  { }% Space after theorem head
+  {}% Theorem head spec
+
+\theoremstyle{mystyle}
+\newtheorem{dfn}{定義}[subsection]
+\newtheorem{lem}[dfn]{補題}
+\newtheorem{cor}[dfn]{系}
+\newtheorem{thm}[dfn]{定理}
+\newtheorem{rem}[dfn]{注意}
+\newtheorem{clm}[dfn]{主張}
+\newtheorem*{prf}{証明}
+
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\newcommand{\divergence}{\mathrm{div}\,}
+\newcommand{\grad}{\mathrm{grad}\,}
+\newcommand{\rot}{\mathrm{rot}\,}
+
+\setlength{\columnseprule}{0.4pt}%2段組に線を引く
+
+\makeatletter
+\makeatother
+\pagestyle{empty}
+
+\title{数学$\mathrm{I}\hspace{-.1em}\mathrm{I}$面白いネタ}
+\author{入佐}
+
+\begin{document}
+\setcounter{section}{0}
+\maketitle
+
+\section{虚数とは}
+足して10, かけて40になる二つの数を考える. 
+本来(実数の世界で考えてみると), 答えがない. しかし, ジローラモ・カルダノは, 
+\[
+5+\sqrt{-15}　と　5-\sqrt{-15}
+\]
+であると考えた. $\sqrt{-15}$とは, 「二乗して$-15$になる数字」という意味である. 
+\end{document}
